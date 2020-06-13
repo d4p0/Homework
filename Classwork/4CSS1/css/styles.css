@@ -1,0 +1,58 @@
+/*main styles*/
+
+/* reset styles*/
+ 
+body {
+	font-size: 10px;
+
+}
+
+a {
+text-decoration: none;
+}
+
+/*menu styles */
+
+/* custom styles */
+p  {
+	/* important is not recommended*/
+		color: blue;
+}
+			
+#description {
+	text-decoration: underline;
+}
+			.special-price {
+				color: orangered;
+			}
+			
+			html body div div.border-big {
+				border: 2px solid black
+			}
+a[target="_blank"] {
+	background-color:yellow;
+}
+a:visited; {
+	color: gray;
+	background-color: #f7ede9
+}
+
+span {
+	color: goldenrod;
+}
+body div:last-child span:first-child
+{
+	color:green;
+}
+span {
+font-family: 'Balsamiq Sans', cursive;
+}
+
+span.lastminuteoffer
+{
+	font-weight:bold;
+}
+
+.border-big.shopping.buy{
+	text-transform: uppercase;
+}
