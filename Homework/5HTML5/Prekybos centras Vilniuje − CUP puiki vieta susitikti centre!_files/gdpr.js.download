@@ -1,7 +1,0 @@
-//JS (show bar on initial load)
-$( document ).ready(function() {
-    if (document.cookie.indexOf("moove_gdpr_popup") == 0) {
-        $("#moove_gdpr_cookie_info_bar").removeClass("moove-gdpr-info-bar-hidden");
-        $("#moove_gdpr_save_popup_settings_button").hide();
-    }
-});
