@@ -1,0 +1,22 @@
+/* in this CSS file we write only moving styles */
+
+
+.car, .car__front-wheels, .car__rear-wheels, .car__rear-wheels-wrappers {
+	position:relative;
+}
+
+.car__front-wheels, .car__rear-wheels {
+	top: 50px;
+}
+
+.car__rear-wheels {
+	position: absolute;
+	top: 20px;
+}
+
+.bdar-container {
+	position:fixed;
+	width: 100%;
+	background: yellow;
+	text-align: center;
+}

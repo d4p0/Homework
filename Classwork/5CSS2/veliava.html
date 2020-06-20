@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="lt">
+	<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Lithuanian flag</title>
+		<style>
+			#flag_container {
+				min-width: 600px;
+				text-align: center;
+				margin: 0 0 0 40px;
+				border: 5px solid;
+				border-radius: 20px;
+			}
+			
+			#flag_container > div {
+				border-top: 3px solid black;
+				border-bottom: 3px solid black; 
+				
+				/* better to use short hand border-width: 2px; */
+				/*border-width: 2px;
+				border-style: solid;
+				border-color: black;
+				
+				
+				
+				padding:60px;
+				margin-left: 50px;*/
+			}
+			
+			
+			#flag_container > div:first-child {
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+			}
+			
+			#flag_container > div:last-child {
+				
+				border:none;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+			}
+			
+			.flag-top {
+				background-color: yellow;
+			}
+			.flag-middle {
+				background-color: green;
+				/ */
+			}
+			.flag-bottom {
+				background-color: red;
+			}
+			
+			h1, #flag_container {
+				font-size:86px;;
+			}
+			.hidden {
+				/* visibility: hidden; */
+				display:block;
+			}
+		</style>
+	</head>
+
+	<body>
+			<!--
+			sukurkite lietuvos veliava. Naudojant elementus 
+			<div> arba <span> naudojant styles dokumente
+			-->
+			<h1> Vėliava</h1>
+		<div id="flag_container">
+			<div class="flag-top">
+				geltona
+			</div>
+			<div class="flag-middle">
+				žalia
+			</div>
+			<div class="flag-bottom hidden">
+				raudona
+			</div>
+		</div>
+		<p>Lietuvos veliava</p>
+	</body>
+</html>

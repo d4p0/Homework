@@ -1,0 +1,114 @@
+/*
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+$(function() {
+	$('#send').click(function (e) {
+		e.preventDefault();
+   		email = $('#email').val();
+   		$('.rsp').hide();
+   		$('.btn').removeClass('error');
+        if (validateEmail(email)) {
+        	$('#send').css('background-image', 'none');
+        	$('#send .loader').show();
+        	$.ajax({
+        			url: 'mail.php',
+        			type: 'post',
+        			dataType: 'json',
+        			data: {email:email},
+        			success: function (data) {
+                        $('#send').css('background-image', 'url("rod.png")');
+                        $('#send .loader').hide();
+
+        				if(data.error){
+        					$('.uzsk').hide();
+							$('.nesekeminga').show();
+        				}
+        				if(data.uzsakyta){
+        					$('.uzsk').hide();
+							$('.sekeminga').show();
+        				}
+        			}
+        		});
+
+        }else{
+        	$('.rsp').show();
+        	$('.btn').addClass('error');
+        }
+	});
+
+
+	$('.darkarta').click(function (e) {
+		e.preventDefault();
+
+		$('.nesekeminga').hide();
+		$('.uzsk').show();
+
+	});
+
+
+});
+*/
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+$(function() {
+    $('#send').click(function (e) {
+        e.preventDefault();
+
+        if (!$("#popupCheckbox").prop("checked")) {
+            $(".additionalSubmit").addClass("error");
+            return(false);
+        } else {
+            $(".additionalSubmit").removeClass("error");
+        }
+
+        email = $('#email').val();
+        $('.rsp').hide();
+        $('.btn').removeClass('error');
+        if (validateEmail(email)) {
+            $('#send').css('background-image', 'none');
+            $('#send .loader').show();
+            $.ajax({
+                url: 'mail.php',
+                type: 'post',
+                dataType: 'json',
+                data: {email:email},
+                success: function (data) {
+                    $('#send').css('background-image', 'url("rod.png")');
+                    $('#send .loader').hide();
+
+                    if(data.error){
+                        $('.uzsk').hide();
+                        $('.additionalSubmit').hide();
+                        $('.nesekeminga').show();
+                    }
+                    if(data.uzsakyta){
+                        $('.uzsk').hide();
+			            $('.additionalSubmit').hide();
+                        $('.sekeminga').show();
+                    }
+                }
+            });
+
+        }else{
+            $('.rsp').show();
+            $('.btn').addClass('error');
+        }
+    });
+
+
+    $('.darkarta').click(function (e) {
+        e.preventDefault();
+
+        $('.nesekeminga').hide();
+        $('.uzsk').show();
+
+    });
+
+
+});

@@ -1,0 +1,38 @@
+
+/* z-index layer:
+	0-default
+	1:main-info: texts, images
+	2: pop up window: bdar newsletter
+*/
+
+body, span, div {
+	margin:0;
+	padding:0;
+	
+}
+
+.car div, .car span {
+	width:200px;
+	height: 200px;
+	background: green;
+}
+
+.car span {
+	display: inline-block;
+}
+
+.bdar-container {
+	width: 100%;
+	background:"red";
+	text-align: center;
+	
+}
+span.car__rear-wheels-red {
+	background: "red";
+	
+}
+
+div.car--blue span.car__car__front-wheels {
+	z-index: 2;
+	
+}
