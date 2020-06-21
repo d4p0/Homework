@@ -1,0 +1,43 @@
+ul li {
+display:inline;
+padding: 0px 30px;
+}
+
+div {
+display:flex;
+justify-content: center;
+}
+
+body
+{font-family: monospace;
+border-style:double;
+padding:20px;
+}
+
+.flex-container{
+display: flex;
+justify-content: center;
+border-top-style: solid;
+border-bottom-style: groove;
+padding: 10px 0px 10px;
+}
+
+a{font-size: 20px;
+color:black;
+text-decoration: none;
+}
+
+a:hover{color:darkred;}
+
+
+.piano {
+height:195px;
+}
+
+
+
+.description {
+text-align: center;
+font-size: 16px;
+margin: 10px 20px 0px;
+}
