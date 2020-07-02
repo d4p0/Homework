@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>To do List</title>
+		<style>
+			ul#to-do-list li: hover {
+				cursor:pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>To do list</h1>
+		<p>What do I have to do today:</p>
+		<ul id ="to-do-list">
+			<li class="to-do-item">Don't forget to breathe</li>
+		
+		</ul>
+		<input id="new-item-input">
+		<button id="add-new-item-button">Add new item</button>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script>
+			
+			
+			$(document).ready(function() {
+				$('button#add-new-item-button').click(function () {
+					let $inputText = $('#new-item-input');
+					
+					if($input.val() !== '')
+					var $totalItems = $('ul#to-do-list').children().length;
+					$('ul#to-do-list').append('<li class="to-do-item">' + $totalItems+  '. ' + $input.val() + '</li>');
+					
+					$inputValue.val('');
+				});
+				$('li.to-do-item').click(
+				function () {
+					$(this).remove();
+					}
+				);
+			});
+		</script>
+	</body>
+</html>

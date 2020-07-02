@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery</title>
+		<style>
+			h1#page-main-title {
+				position: relative;
+				border: 1px dotted green;
+			}
+			.demo-text-red { color: red; font-size: 20px;}
+		</style>
+	</head>
+
+	<body>
+		<h1 id="page-main-title">Jquery sandbox</h1>
+		<p id="demo-text">Our test texts and bla bla.</p>
+		<p>Something new.</p>
+		<p>Whatever</p>
+		
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<input type="text" id="input-text">
+		<button onclick="buttonClick()">Button</button>
+		<script>
+			$(document).ready(function() {;
+				let testText = 'Hi';
+				let javascriptSelector = document.getElementById('page-main-title').innerHTML;
+				let $jQuerySelector = $('#demo-text');
+
+				console.log($jQuerySelector);
+
+				function buttonClick() {
+					let inputValue = document.getElementById('input-text').value;
+					let $inputValue = $('#input-text').val();
+					alert($inputValue);
+
+				}
+
+				//function animateH1OnClick() {
+					$('#page-main-title').click(function () {
+						console.log('H1 is clicked ;)');
+						$('#page-main-title').animate(
+							{
+								left: '200px',
+								borderWidth: '20px',
+							},
+							3000,
+							function() {
+								alert('animationwascompleted');
+							}
+						);
+					});
+										  
+										  
+										  
+										  
+					$('p').hover(
+						function () {
+							$(this).addClass('demo-text-red');
+						}, function () {
+							$(this).removeClass('demo-text-red');
+						}
+					);
+				});
+			
+
+			//}
+		</script>
+
+	</body>
+</html>

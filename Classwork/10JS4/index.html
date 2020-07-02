@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Arrays</title>
+	</head>
+
+	<body>
+		<script>
+			var hobbies = [
+				['Eat', 1, 'burgers'],
+				['Sleep', 7],
+				['coding', 3]];
+				
+			hobbies[1][0]= 'sport';
+			//console.log(hobbies[0][2])
+			//console.log(hobbies[1])
+
+			var extraActivity = [['Gaming', 0.7], ['Pet', 2]];
+			var allActivities = hobbies.concat(extraActivity);
+			
+		
+			function isActivityCoding(){
+				if (allActivities.indexOf('Coding') >=0) {
+					console.log('thanx god youre are a hacker')
+
+				} else {
+					allActivities.push('Coding');
+
+				}
+			}
+			
+			function percentageOfActivity() {
+				for (var i = 0; i < allActivities.length; i++) {
+					var activityPercentage = ( (allActivities[i][1] / 24) * 100 ).toFixed();
+					activityPercentage = activityPercentage.toFixed();
+					console.log(activityPercentage);
+							
+				}
+			}
+			
+			function freeTimeLeft() {
+				var result;
+				var currentTimeUsed = 0;
+				const hoursInADay = 24;
+				
+				for ( var j = 0; j < allActivities.lenght; j++){
+					currentTimeUsed += allActivities[j][1];
+					
+				}
+				result = hoursInADay - currentTimeUsed;
+				
+				console.log(result);
+			}
+			
+			percentageOfActivity();
+			freeTimeLeft();
+			
+			//allActivities = allActivities.sort();
+			console.log(allActivities);
+		</script>
+	</body>
+	
+</html>

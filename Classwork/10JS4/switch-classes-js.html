@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Switch Classes with JS</title>
+		<style>
+			.alert-message{
+				color:red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p id="main-content">Some demo text which color will be changed</p>
+		<p id="text-red-text">I want to be red.</p>
+		<button id="change-color">Change Text color</button>
+		
+		<script>
+			var changeColorButton = document.querySelector('button#change-color');
+			changeColorButton.addEventListener('click', changeTextColor);
+			
+			function changeTextColor() {
+				
+				
+				
+				//changabletext.style.color = 'red';
+				
+				toggleClassname('alert-message', 'main-content');
+				toggleClassname('alert-message', 'text-red-text');
+			}
+			
+			
+			function toggleClassname(className, elementIdName) {
+				
+				var changabletext = document.getElementById (elementIdName);
+				
+				if (changabletext.classList.contains(className)) {
+					changabletext.classList.remove(className);
+					writeToConsole(' Class name " ' + className + '" was removed. ')
+				} else {
+					changabletext.classList.add(className);
+				}
+			}
+			
+			function writeToConsole(textToLog){
+				console.log(textToLog);
+			}
+			
+		</script>
+	</body>
+</html>
